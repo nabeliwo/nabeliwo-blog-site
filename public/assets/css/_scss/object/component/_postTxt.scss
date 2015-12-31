@@ -1,0 +1,26 @@
+//-------------------------------------//
+//  PostTxt
+//-------------------------------------//
+
+.c-postTxt__title {
+    font-size: 18px;
+    line-height: 20px;
+}
+.c-postTxt__desc {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 24px;
+}
+.c-postTxt__meta {
+    font-size: 0;
+
+    & > li {
+        display: inline-block;
+        color: #aaa;
+        font-size: 12px;
+
+        &:not(:first-child) {
+            margin-left: 10px;
+        }
+    }
+}

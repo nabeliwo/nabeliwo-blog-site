@@ -1,0 +1,134 @@
+//-------------------------------------//
+//  Menu
+//-------------------------------------//
+
+#menu__btn,
+.menu__btn__line {
+    display: inline-block;
+    position: absolute;
+    transition: all .4s;
+}
+#menu__btn {
+    z-index: 20;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 28px;
+    cursor: pointer;
+}
+.menu__btn__line {
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.menu__btn__line:first-child { top: 0; }
+.menu__btn__line:nth-child(2) { top: 13px; }
+.menu__btn__line:last-child { bottom: 0; }
+
+#menu__btn.is-active .menu__btn__line:first-child { transform: translateY(13px) rotate(-315deg); }
+#menu__btn.is-active .menu__btn__line:nth-child(2) { opacity: 0; }
+#menu__btn.is-active .menu__btn__line:last-child { transform: translateY(-14px) rotate(315deg); }
+
+
+#menu {
+    z-index: 10;
+    visibility: hidden;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+#menu.is-active {
+    visibility: visible;
+    top: 0;
+    background-color: rgba(0, 0, 0, .8);
+}
+.menu__items > li {
+    padding: 20px 0;
+
+    &:first-child {
+        padding-top: 40px;
+    }
+}
+.menu__items__title {
+    font-size: 34px;
+}
+.menu__link {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        right: 50%;
+        bottom: -6px;
+        left: 50%;
+        display: block;
+        height: 1px;
+        background-color: #fff;
+        transition: left .2s ease-in-out, right .2s ease-in-out;
+        content: '';
+    }
+
+    &:hover:after {
+        right: 0;
+        left: 0;
+    }
+}
+.menu__items__list {
+    margin-top: 20px;
+    font-style: 0;
+
+    & > li {
+        display: inline-block;
+        padding: 0 10px;
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+
+.menu__form {
+    position: relative;
+    width: 280px;
+    border: 1px solid #fff;
+}
+.menu__form > dt {
+    margin-right: 30px;
+    padding: 5px 0 5px 8px;
+}
+.menu__form__txt {
+    width: 100%;
+    height: 18px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+}
+.menu__form > dd {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.menu__form__search:after {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    content: "";
+    @include r-sprite($menu-search);
+}
+.menu__form__submit {
+    display: block;
+    width: 29px;
+    height: 29px;
+}
+
+
+
+@media (max-width: $break-point) {
+
+}

@@ -1,0 +1,78 @@
+//==============================================
+//  PostTab
+//==============================================
+
+.p-postTab { font-size: $font-size-ss; }
+.p-postTab__box {
+    padding: 20px 0;
+    border-bottom: 1px solid $off-color;
+}
+.p-postTab__headline {
+    margin-bottom: 10px;
+    font-size: $font-size-s;
+}
+.p-postTab__desc { line-height: 16px; }
+.p-postTab__date > li {
+    display: inline-block;
+    width: 80px;
+
+    &:not(:first-child) { margin-left: 5px; }
+}
+.p-postTab__check > li {
+    display: inline-block;
+    padding: 5px;
+}
+.p-postTab__file {
+    overflow: hidden;
+    position: relative;
+    background-color: $base-site-color;
+    color: $other-font-color;
+    font-size: $font-size-m;
+    line-height: 40px;
+    text-align: center;
+
+    &:before {
+        display: inline-block;
+        margin-right: 5px;
+        font-size: $font-size-xl;
+        vertical-align: -2px;
+        content: "+";
+    }
+}
+.p-postTab__file__input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.p-postTab__gallery {
+    overflow: scroll;
+    height: 250px;
+    border: 1px solid $off-color;
+    background-color: #fff;
+}
+.p-postTab__gallery__items {
+    padding: 5px;
+    vertical-align: middle;
+
+    & > li {
+        display: inline-block;
+        width: 33.333%;
+        padding: 5px;
+        cursor: pointer;
+    }
+}
+.p-postTab__gallery__thumb.is-active {
+    border: 3px solid $base-site-color;
+}
+
+.p-postTab__select {
+    .p-postTab__select__btn {
+        width: 100%;
+
+        &:not(:first-child) { margin-top: 10px; }
+    }
+}

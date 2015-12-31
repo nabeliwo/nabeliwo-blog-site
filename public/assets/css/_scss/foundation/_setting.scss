@@ -1,0 +1,39 @@
+//-------------------------------------//
+//  Settings
+//-------------------------------------//
+
+//  Base
+//-------------------------------------
+
+$base-background-image: '/assets/img/common/bg.jpg';
+$base-background-color: #fff;
+$base-site-color: #2244aa;
+$base-font-color: #3a3a3a;
+$base-font-size: 16px;
+
+
+//  Other
+//-------------------------------------
+
+$other-font-color: #fff;
+$light-font-color: #aaa;
+$off-color: #ddd;
+
+$manage-background-color: #f9f9f9;
+
+
+//  Font
+//-------------------------------------
+
+$font-size-xl: $base-font-size + 6;
+$font-size-ll: $base-font-size + 4;
+$font-size-l: $base-font-size + 2;
+$font-size-m: $base-font-size;
+$font-size-s: $base-font-size - 2;
+$font-size-ss: $base-font-size - 4;
+$font-size-xs: $base-font-size - 6;
+
+
+// CSS Media Query Break Point
+$break-point-large: 1200px;
+$break-point: 768px;

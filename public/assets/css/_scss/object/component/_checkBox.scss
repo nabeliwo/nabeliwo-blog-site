@@ -1,0 +1,76 @@
+//-------------------------------------//
+//  CheckBox
+//-------------------------------------//
+
+.c-checkBox {
+    display: inline-block;
+    cursor: pointer;
+}
+.c-checkBox__txt {
+    position: relative;
+
+    &:before,
+    &:after {
+        position: absolute;
+        top: 50%;
+        content: '';
+    }
+    &:before {
+        left: 0;
+        background-color: #fff;
+        border: 1px solid $off-color;
+    }
+    &:after {
+        opacity: 0;
+        transform: rotate(-45deg);
+    }
+}
+.c-checkBox__check {
+    display: none;
+
+    &:checked + .c-checkBox__txt:before { border-color: $base-site-color; }
+    &:checked + .c-checkBox__txt:after { opacity: 1; }
+}
+
+.c-checkBox--small {
+    font-size: $font-size-ss;
+
+    .c-checkBox__txt {
+        padding: 1px 0 1px 20px;
+
+        &:before {
+            width: 14px;
+            height: 14px;
+            margin-top: -7px;
+        }
+        &:after {
+            left: 3px;
+            width: 8px;
+            height: 4px;
+            margin-top: -4px;
+            border-left: 2px solid $base-site-color;
+            border-bottom: 2px solid $base-site-color;
+        }
+    }
+}
+.c-checkBox--middle {
+    font-size: $font-size-m;
+
+    .c-checkBox__txt {
+        padding: 2px 0 2px 28px;
+
+        &:before {
+            width: 20px;
+            height: 20px;
+            margin-top: -10px;
+        }
+        &:after {
+            left: 4px;
+            width: 11px;
+            height: 6px;
+            margin-top: -4px;
+            border-left: 3px solid $base-site-color;
+            border-bottom: 3px solid $base-site-color;
+        }
+    }
+}

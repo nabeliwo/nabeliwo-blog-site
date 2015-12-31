@@ -1,0 +1,13 @@
+//-------------------------------------//
+//  Manage Main
+//-------------------------------------//
+
+#m-main {
+    display: flex;
+    min-height: 100vh;
+}
+#m-main__board {
+    width: 100%;
+    padding: 20px;
+    background-color: $manage-background-color;
+}

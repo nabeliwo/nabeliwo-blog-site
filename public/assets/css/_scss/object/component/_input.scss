@@ -1,0 +1,14 @@
+//-------------------------------------//
+//  Input
+//-------------------------------------//
+
+.c-input {
+    display: block;
+    width: 100%;
+    border: 1px solid #c2cdd1;
+    background-color: #fff;
+
+    &:focus { border-color: #4EACD1; }
+}
+.c-input--middle { padding: 5px; }
+.c-input--large { padding: 10px; }

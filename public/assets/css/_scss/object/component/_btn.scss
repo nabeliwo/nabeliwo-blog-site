@@ -1,0 +1,27 @@
+//-------------------------------------//
+//  Btn
+//-------------------------------------//
+
+.c-btn {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+.c-btn--middle {
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 28px;
+}
+.c-btn--large {
+    padding: 0 40px;
+    font-size: 24px;
+    line-height: 40px;
+}
+.c-btn--default {
+    background-color: $base-site-color;
+    color: $other-font-color;
+}
+.c-btn--off {
+    background-color: $off-color;
+    color: $base-font-color;
+}
