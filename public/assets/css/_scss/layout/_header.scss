@@ -9,25 +9,24 @@
     background-size: cover;
 }
 .header__title {
-    display: block;
-    color: #fff;
+    color: $light-font-color;
     font-size: 50px;
     text-align: center;
 }
 .header__title__link {
-    position: relative;
     display: inline-block;
+    position: relative;
 
     &:after {
+        display: block;
         position: absolute;
         right: 50%;
         bottom: -10px;
         left: 50%;
-        display: block;
         height: 1px;
         background-color: #fff;
-        content: '';
         transition: left .2s ease-in-out, right .2s ease-in-out;
+        content: '';
     }
     &:hover:after {
         right: 0;

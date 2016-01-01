@@ -3,6 +3,7 @@ import spritesmith from 'gulp.spritesmith';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-sass';
 import cssnext from 'gulp-cssnext';
+import concat from 'gulp-concat';
 import browserify from 'browserify';
 import babelify from 'babelify';
 import source from 'vinyl-source-stream';
@@ -30,6 +31,9 @@ const path = {
       './public/assets/js/app/*.js',
       './public/assets/js/app/**/*.js'
     ],
+    libs: [
+      './public/assets/js/libs/router.js'
+    ],
     lint: [
       './*.js',
       './**/*.js'
@@ -38,7 +42,11 @@ const path = {
   img: {
     files: './public/assets/img/sprite/*.png',
     dest: './public/assets/img/'
-  }
+  },
+  view: [
+    './views/*.html',
+    './views/**/*.html'
+  ]
 };
 
 gulp.task('sprite', () => {
@@ -67,6 +75,12 @@ gulp.task('scss', () => {
     .pipe(reload({ stream: true }));
 });
 
+gulp.task('concat', () => {
+  gulp.src(path.js.libs)
+  .pipe(concat('libs.js'))
+  .pipe(gulp.dest(path.js.dest));
+});
+
 gulp.task('browserify', () => {
   browserify(path.js.ep, { debug: true })
     .transform(babelify)
@@ -90,9 +104,9 @@ gulp.task('nodemon', cb => {
   let called = false;
 
   return nodemon({
-    script: './index.js',
+    script: './bin/www',
     ext: 'js html',
-    ignore: ['./public/assets/', 'node_modules'],
+    ignore: ['./public/', './node_modules/', './views/'],
     nodeArgs: ['--harmony']
   })
   .on('start', () => {
@@ -119,7 +133,7 @@ gulp.task('browser-sync', ['nodemon'], () => {
 });
 
 gulp.task('default', ['browser-sync'], () => {
-  gulp.watch('./public/index.html').on('change', reload);
+  gulp.watch(path.view).on('change', reload);
   gulp.watch(path.scss.watch, ['scss']);
   gulp.watch(path.js.watch, ['browserify']);
 });

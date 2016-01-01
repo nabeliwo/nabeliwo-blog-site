@@ -19,14 +19,6 @@
 
 @import "layout/header";
 @import "layout/menu";
-@import "layout/main";
-//@import "layout/sub";
-//@import "layout/footer";
-
-// manage
-@import "layout/manage/header";
-@import "layout/manage/main";
-@import "layout/manage/sidebar";
 
 
 //==============================================
@@ -37,25 +29,16 @@
 //  Component
 //----------------------------------------------
 
-@import "Object/component/title";
-@import "Object/component/input";
-@import "Object/component/btn";
-@import "Object/component/icon";
-@import "Object/component/checkBox";
-//@import "object/component/postTxt";
-//@import "Object/component/items";
-//@import "Object/component/pager";
+@import "Object/Component/title";
+@import "Object/Component/bottomLine";
+@import "Object/Component/menuIcon";
+
 
 //----------------------------------------------
 //  Project
 //----------------------------------------------
 
-//@import "object/project/index";
-//@import "Object/project/popularPosts";
-//@import "Object/project/about";
-//@import "Object/project/post";
-@import "Object/project/createPost";
-@import "Object/project/postTab";
+
 
 //----------------------------------------------
 //  Utility
