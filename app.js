@@ -7,15 +7,8 @@ const bodyParser = require('body-parser');
 const ECT = require('ect');
 
 const routes = {
-  index: require('./routes/index')
-  //oneplay: require('./app/routes/oneplay'),
-  //twoplay: require('./app/routes/twoplay'),
-  //battle: require('./app/routes/battle'),
-  //rule: require('./app/routes/rule'),
-  //ranking: require('./app/routes/ranking'),
-  //login: require('./app/routes/login'),
-  //signup: require('./app/routes/signup'),
-  //profile: require('./app/routes/profile')
+  index: require('./routes/index'),
+  postDetail: require('./routes/postDetail')
 };
 
 const app = express();
@@ -37,10 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // routing
 app.use('/', routes.index);
-//app.use('/', routes.index);
-//app.use('/oneplay', routes.oneplay);
-//app.use('/twoplay', routes.twoplay);
-//app.use('/battle', routes.battle);
+app.use('/postDetail/', routes.postDetail);
 
 
 // catch 404 and forward to error handler

@@ -1,0 +1,10 @@
+//-------------------------------------//
+//  Icon
+//-------------------------------------//
+
+.c-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+.c-icon--post-date { @include r-sprite($post-date); }
+.c-icon--post-category { @include r-sprite($post-category); }

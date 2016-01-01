@@ -2,3 +2,23 @@
 //  BottomLine
 //-------------------------------------//
 
+.c-bottomLine {
+    display: inline-block;
+    position: relative;
+
+    &:after {
+        display: block;
+        position: absolute;
+        bottom: -6px;
+        right: 50%;
+        left: 50%;
+        height: 1px;
+        background-color: #fff;
+        transition: left .2s ease-in-out, right .2s ease-in-out;
+        content: '';
+    }
+    &:hover:after {
+        right: 0;
+        left: 0;
+    }
+}

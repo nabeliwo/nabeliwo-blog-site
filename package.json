@@ -46,7 +46,6 @@
     "ect": "^0.5.9",
     "express": "~4.13.1",
     "morgan": "~1.6.1",
-    "page": "^1.6.4",
     "serve-favicon": "~2.3.0"
   },
   "babel": {

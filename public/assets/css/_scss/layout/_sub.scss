@@ -1,0 +1,24 @@
+//-------------------------------------//
+//  Sub
+//-------------------------------------//
+
+#sub {
+    padding: 80px 20px;
+    background-color: $sub-background-color;
+}
+.sub__title {
+    margin-bottom: 20px;
+    font-size: $font-size-xl + 2;
+    text-align: center;
+}
+.sub__items {
+    display: flex;
+    max-width: 1220px;
+    margin: 0 auto;
+
+    & > li { padding: 0 10px; }
+}
+
+@media (max-width: $break-point) {
+
+}

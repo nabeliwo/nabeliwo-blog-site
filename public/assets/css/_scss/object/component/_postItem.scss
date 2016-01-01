@@ -1,0 +1,31 @@
+//-------------------------------------//
+//  PostItem
+//-------------------------------------//
+
+.c-postItem__title {
+    margin-bottom: 2px;
+    font-size: $font-size-l;
+    line-height: 20px;
+}
+.c-postItem__desc {
+    margin-bottom: 7px;
+    color: $other-font-color;
+    font-size: $font-size-s;
+    line-height: 24px;
+}
+.c-postItem__meta {
+    font-size: 0;
+
+    & > li {
+        display: inline-block;
+        color: $other-font-color;
+        font-size: $font-size-ss;
+
+        &:not(:first-child) { margin-left: 10px; }
+    }
+}
+.c-postItem__icon { margin-right: 2px; }
+.c-postItem__thumb {
+    display: block;
+    margin-bottom: 10px;
+}

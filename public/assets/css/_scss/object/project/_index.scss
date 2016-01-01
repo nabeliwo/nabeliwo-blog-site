@@ -1,0 +1,20 @@
+//-------------------------------------//
+//  Index
+//-------------------------------------//
+
+.p-index__section { padding: 40px 0; }
+.p-index__title { margin-bottom: 20px; }
+.p-index__btn { text-align: center; }
+.p-index__list {
+    margin-bottom: 20px;
+    font-size: 0;
+
+    & > li {
+        display: inline-block;
+        width: 24%;
+        margin-left: 1.3%;
+        padding-bottom: 10px;
+
+        &:nth-child(4n + 1) { margin: 0; }
+    }
+}

@@ -1,19 +1,16 @@
 //-------------------------------------//
-//  Header
+//  Footer
 //-------------------------------------//
 
-#header {
-    position: relative;
-    padding: 90px 0;
+#footer {
+    padding: 80px 0 20px;
     background: url($base-background-image) center center;
     background-size: cover;
 }
-.header__title {
+.footer__copy {
     color: $light-font-color;
-    font-size: 50px;
     text-align: center;
 }
-.c-bottomLine.header__title__link:after { bottom: -10px; }
 
 @media (max-width: $break-point) {
 
