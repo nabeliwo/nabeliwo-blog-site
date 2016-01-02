@@ -1,0 +1,14 @@
+//-------------------------------------//
+//  Share
+//-------------------------------------//
+
+.c-share {
+    display: block;
+    padding: 7px 0 8px;
+    text-align: center;
+
+    &.is-twitter { background-color: #00acee; }
+    &.is-facebook { background-color: #3b5998; }
+    &.is-hatena { background-color: #0090df; }
+    &.is-pocket { background-color: #f5494e; }
+}

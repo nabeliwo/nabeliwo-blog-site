@@ -8,3 +8,8 @@
 }
 .c-icon--post-date { @include r-sprite($post-date); }
 .c-icon--post-category { @include r-sprite($post-category); }
+.c-icon--post-tag { @include r-sprite($post-tag); }
+.c-icon--share-twitter { @include r-sprite($share-twitter); }
+.c-icon--share-facebook { @include r-sprite($share-facebook); }
+.c-icon--share-hatena { @include r-sprite($share-hatena); }
+.c-icon--share-pocket { @include r-sprite($share-pocket); }
