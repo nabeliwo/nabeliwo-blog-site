@@ -1,5 +1,5 @@
-# nabeliwo-blog-site
-自分のブログのサイト側です。
+# nabeliwo-portfolio-site
+nabeliwoのポートフォリオのサイト側です。
 管理側は[nabeliwo-blog-manage](https://github.com/nabeliwo/nabeliwo-blog-manage)です。
 
 ## Requires
